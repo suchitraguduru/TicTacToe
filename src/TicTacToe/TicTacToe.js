@@ -73,10 +73,11 @@ const TicTacToe = () => {
 
 	return (
 		<div className='container'>
-			<table>
-				Turn: {turn}
+			<table className="table">
+			<caption className="turn"> Turn: {turn}</caption>
+				
 				<tbody>
-					<tr>
+					<tr >
 						<Cell num={0} />
 						<Cell num={1} />
 						<Cell num={2} />
@@ -95,8 +96,8 @@ const TicTacToe = () => {
 			</table>
 			{winner && (
 				<>
-					<p>{winner} is the winner!</p>
-					<button onClick={() => handleRestart()}>Play Again</button>
+					<p className="winner">{winner} is the winner!</p>
+					<button className="btnn" onClick={() => handleRestart()}>Play Again</button>
 				</>
 			)}
 		</div>
